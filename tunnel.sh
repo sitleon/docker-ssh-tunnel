@@ -8,6 +8,10 @@ ssh-keygen -y -f /app/key_file > /app/key_file.pub
 ssh \
     -vv \
     -o StrictHostKeyChecking=no \
-    -N $TUNNEL_HOST \
+        -o TCPKeepAlive=yes \
+        -o ConnectTimeout=5 \
+        -o ServerAliveCountMax=10 \
+        -o ServerAliveInterval=15 \
+    -N $TUNNEL_HOST_STRING \
     -L *:$LOCAL_PORT:$REMOTE_HOST:$REMOTE_PORT \
     -i /app/key_file
