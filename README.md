@@ -4,7 +4,7 @@
     version: '3'
     services:
       mysql-proxy:
-        image: sitleon/docker-ssh-tunnel:0.0.1
+        image: sitleon/docker-ssh-tunnel
         volumes:
           # required update your own key file path
           - ~/.ssh/key_file:/app/key_file

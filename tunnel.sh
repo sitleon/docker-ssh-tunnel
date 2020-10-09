@@ -9,5 +9,5 @@ ssh \
     -vv \
     -o StrictHostKeyChecking=no \
     -N $TUNNEL_HOST \
-    -L *:$REMOTE_PORT:$REMOTE_HOST:$REMOTE_PORT \
+    -L *:$LOCAL_PORT:$REMOTE_HOST:$REMOTE_PORT \
     -i /app/key_file
