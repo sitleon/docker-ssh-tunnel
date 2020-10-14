@@ -1,6 +1,3 @@
-# chmod the key
-chmod 400 /app/key_file
-
 # fix load pubkey /app/key_file invalid format
 # ref: https://joshtronic.com/2020/06/28/load-pubkey-invalid-format-when-using-ssh
 ssh-keygen -y -f /app/key_file > /app/key_file.pub
